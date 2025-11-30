@@ -2,7 +2,7 @@
 
 namespace App\User\Domain\ValueObject;
 
-use App\Shared\ValueObject\UserIdValueObject;
+use App\Shared\Domain\ValueObject\UserIdValueObject;
 
 final class UserId extends UserIdValueObject
 {

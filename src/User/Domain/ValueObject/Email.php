@@ -2,7 +2,7 @@
 
 namespace App\User\Domain\ValueObject;
 
-use App\Shared\ValueObject\EmailValueObject;
+use App\Shared\Domain\ValueObject\EmailValueObject;
 
 final class Email extends EmailValueObject
 {

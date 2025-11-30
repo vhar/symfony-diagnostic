@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Shared\ValueObject;
+namespace App\Shared\Domain\ValueObject;
 
 use Webmozart\Assert\Assert;
 
-abstract class TextValueObject
+abstract class SlugValueObject
 {
     protected string $value;
 
     public function __construct(string $value)
     {
-        Assert::string($value);
-        Assert::minLength($value, 3);
+        Assert::regex($value, '/^[a-z0-9]+(?:-[a-z0-9]+)*$/');
 
         $this->value = $value;
     }

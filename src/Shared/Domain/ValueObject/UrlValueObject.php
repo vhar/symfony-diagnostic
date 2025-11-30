@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Shared\ValueObject;
+namespace App\Shared\Domain\ValueObject;
 
 use Exception;
 use Webmozart\Assert\Assert;

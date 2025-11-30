@@ -19,9 +19,17 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    App\Diagnostic\UI\Http\Rest\:
-      resource: '../src/Diagnostic/UI/Http/Rest/**/*Controller.php'
+    App\Diagnostic\UI\Http\Api\:
+      resource: '../src/Diagnostic/UI/Http/Api/**/**/*Controller.php'
       tags: ['controller.service_arguments']
 
     App\Diagnostic\Domain\Repository\DiagnosticRepositoryInterface:
       alias: App\Diagnostic\Infrastructure\Persistence\Doctrine\DiagnosticRepositoryDoctrine
+
+    App\Diagnostic\Infrastructure\EventListener\KervelExceptionEventListener:
+      tags: 
+        - { name: kernel.event_listener, event: kernel.exception }
+
+    App\Diagnostic\Infrastructure\EventListener\KervelViewEventListener:
+      tags: 
+        - { name: kernel.event_listener, event: kernel.view }

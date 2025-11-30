@@ -1,16 +1,18 @@
 <?php
 
-namespace App\Shared\ValueObject;
+namespace App\Shared\Domain\ValueObject;
 
 use Webmozart\Assert\Assert;
 
-abstract class EmailValueObject
+abstract class TitleValueObject
 {
     protected string $value;
 
     public function __construct(string $value)
     {
-        Assert::email($value);
+        Assert::string($value);
+        Assert::minLength($value, 3);
+        Assert::maxLength($value, 255);
 
         $this->value = $value;
     }

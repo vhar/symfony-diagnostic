@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Shared\ValueObject;
+namespace App\Shared\Domain\ValueObject;
 
 use Webmozart\Assert\Assert;
 
-abstract class PasswordValueObject
+abstract class EmailValueObject
 {
     protected string $value;
 
     public function __construct(string $value)
     {
-        Assert::regex($value, '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/');
+        Assert::email($value);
 
         $this->value = $value;
     }

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Diagnostic\UI\Http\Requests;
+namespace App\Diagnostic\UI\Http\Api\CreateDiagnostic\v1\Request;
 
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Diagnostic\Domain\ValueObject\Diagnostic\AgeRestrictionEnum;
 use App\Diagnostic\Domain\ValueObject\Diagnostic\DiagnosticStatusEnum;
 
 
-final class CreateDiagnosticRequest
+final class CreateDiagnosticDto
 {
     public function __construct(
         #[Assert\Type('string')]
@@ -28,7 +28,7 @@ final class CreateDiagnosticRequest
         #[Assert\Type('string')]
         #[Assert\NotNull]
         #[Assert\Length(min: 3)]
-        public string $description,
+        public ?string $description,
 
         #[Assert\Url]
         public ?string $image,

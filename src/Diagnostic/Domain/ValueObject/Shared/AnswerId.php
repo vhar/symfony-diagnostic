@@ -2,7 +2,7 @@
 
 namespace App\Diagnostic\Domain\ValueObject\Shared;
 
-use App\Shared\ValueObject\ModelIdValueObject;
+use App\Shared\Domain\ValueObject\ModelIdValueObject;
 
 
 final class AnswerId extends ModelIdValueObject

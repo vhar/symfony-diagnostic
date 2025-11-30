@@ -2,7 +2,7 @@
 
 namespace App\Diagnostic\Domain\ValueObject\Common;
 
-use App\Shared\ValueObject\TextValueObject;
+use App\Shared\Domain\ValueObject\TextValueObject;
 
 final class Text extends TextValueObject
 {

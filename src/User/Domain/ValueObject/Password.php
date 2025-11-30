@@ -2,7 +2,7 @@
 
 namespace App\User\Domain\ValueObject;
 
-use App\Shared\ValueObject\PasswordValueObject;
+use App\Shared\Domain\ValueObject\PasswordValueObject;
 
 final class Password extends PasswordValueObject
 {

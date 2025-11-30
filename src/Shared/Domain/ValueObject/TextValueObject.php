@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Shared\ValueObject;
+namespace App\Shared\Domain\ValueObject;
 
 use Webmozart\Assert\Assert;
 
-abstract class TitleValueObject
+abstract class TextValueObject
 {
     protected string $value;
 
@@ -12,7 +12,6 @@ abstract class TitleValueObject
     {
         Assert::string($value);
         Assert::minLength($value, 3);
-        Assert::maxLength($value, 255);
 
         $this->value = $value;
     }

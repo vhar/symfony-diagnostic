@@ -2,7 +2,7 @@
 
 namespace App\Diagnostic\Domain\ValueObject\Common;
 
-use App\Shared\ValueObject\NaturalValueObject;
+use App\Shared\Domain\ValueObject\NaturalValueObject;
 
 final class Natural extends NaturalValueObject
 {

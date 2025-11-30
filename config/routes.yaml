@@ -1,4 +1,4 @@
 diagnostic_controllers:
-    resource: ../src/Diagnostic/UI/Http/Rest/
+    resource: ../src/Diagnostic/UI/Http/Api/
     type: attribute
     prefix: api/

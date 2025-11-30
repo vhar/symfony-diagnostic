@@ -51,7 +51,7 @@ final readonly class CreateDiagnosticCommand
     public function __construct(
         string $slug,
         string $authorId,
-        int $status,
+        string $status,
         string $title,
         string $description,
         string $image,
@@ -66,7 +66,7 @@ final readonly class CreateDiagnosticCommand
     ) {
         $this->slug = new Slug($slug);
         $this->authorId = new AuthorId($authorId);
-        $this->status = DiagnosticStatusEnum::from($status);
+        $this->status = (new \ReflectionEnum(DiagnosticStatusEnum::class))->getConstant($status);
         $this->title = new Title($title);
         $this->description = new Text($description);
         $this->image = new Url($image);

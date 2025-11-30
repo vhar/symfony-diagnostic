@@ -2,7 +2,7 @@
 
 namespace App\User\Domain\ValueObject;
 
-use App\Shared\ValueObject\NameValueObject;
+use App\Shared\Domain\ValueObject\NameValueObject;
 
 final class Name extends NameValueObject
 {
