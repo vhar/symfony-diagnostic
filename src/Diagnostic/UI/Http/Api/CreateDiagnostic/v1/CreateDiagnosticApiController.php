@@ -44,7 +44,7 @@ final class CreateDiagnosticApiController
         return new ApiSuccessResponse(
             data: $entityId->getValue(),
             message: null,
-            resultCode: Response::HTTP_OK
+            resultCode: Response::HTTP_CREATED
         );
     }
 }
