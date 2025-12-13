@@ -6,12 +6,12 @@ use DateTimeImmutable;
 use App\Diagnostic\Domain\ValueObject\Shared\AnswerId;
 use App\Diagnostic\Domain\ValueObject\Shared\QuestionId;
 use App\Diagnostic\Domain\ValueObject\DiagnosticInstance\InstanceId;
-use App\Diagnostic\Domain\ValueObject\DiagnosticInstance\InstabceAnswerId;
+use App\Diagnostic\Domain\ValueObject\DiagnosticInstance\InstanceAnswerId;
 
 
 final class InstanceAnswer
 {
-    private InstabceAnswerId $id;
+    private InstanceAnswerId $id;
     private InstanceId $instanceId;
     private QuestionId $questionId;
     private AnswerId $answerId;
@@ -19,7 +19,7 @@ final class InstanceAnswer
     private DateTimeImmutable $updatedAt;
 
     /**
-     * @param InstabceAnswerId $id
+     * @param InstanceAnswerId $id
      * @param InstanceId  $instanceId
      * @param QuestionId $questionId
      * @param AnswerId $answerId
@@ -27,7 +27,7 @@ final class InstanceAnswer
      * @param DateTimeImmutable $updatedAt
      */
     private function __construct(
-        InstabceAnswerId $id,
+        InstanceAnswerId $id,
         InstanceId $instanceId,
         QuestionId $questionId,
         AnswerId $answerId,
@@ -48,7 +48,7 @@ final class InstanceAnswer
      * @param AnswerId $answerId
      * @param DateTimeImmutable $createdAt
      * @param DateTimeImmutable|null $updatedAt
-     * @param InstabceAnswerId|null $id
+     * @param InstanceAnswerId|null $id
      * @return self
      */
     public static function create(
@@ -57,10 +57,10 @@ final class InstanceAnswer
         AnswerId $answerId,
         DateTimeImmutable $createdAt,
         ?DateTimeImmutable $updatedAt = null,
-        ?InstabceAnswerId $id = null,
+        ?InstanceAnswerId $id = null,
     ): self {
         return new self(
-            $id ?? new InstabceAnswerId(),
+            $id ?? new InstanceAnswerId(),
             $instanceId,
             $questionId,
             $answerId,
@@ -69,7 +69,7 @@ final class InstanceAnswer
         );
     }
 
-    public function getId(): InstabceAnswerId
+    public function getId(): InstanceAnswerId
     {
         return $this->id;
     }
