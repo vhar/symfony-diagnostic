@@ -51,7 +51,7 @@ final class User
         return $this->email;
     }
 
-    public function setEmail(Email $email): self
+    private function setEmail(Email $email): self
     {
         $this->email = $email;
 
@@ -63,7 +63,7 @@ final class User
         return $this->password;
     }
 
-    public function setPassword($password): self
+    private function setPassword($password): self
     {
         $this->password = $password;
 
@@ -80,7 +80,7 @@ final class User
         return array_unique($roles);
     }
 
-    public function setRoles(array $roles): self
+    private function setRoles(array $roles): self
     {
         $this->roles = $roles;
 
@@ -92,7 +92,7 @@ final class User
         return $this->firstName;
     }
 
-    public function setFirstName(Name $firstName): self
+    private function setFirstName(Name $firstName): self
     {
         $this->firstName = $firstName;
 
@@ -103,7 +103,7 @@ final class User
         return $this->lastName;
     }
 
-    public function setLastName(Name $lastName): self
+    private function setLastName(Name $lastName): self
     {
         $this->lastName = $lastName;
 
