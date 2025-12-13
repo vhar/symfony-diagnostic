@@ -32,11 +32,11 @@ final class User
         $userId = new UserId();
         $user = new self($userId);
 
-        $user->setEmail($email);
-        $user->setRoles($roles);
-        $user->setFirstName($firstName);
-        $user->setLastName($lastName);
-        $user->setPassword($password);
+        $user->setEmail($email)
+            ->setRoles($roles)
+            ->setFirstName($firstName)
+            ->setLastName($lastName)
+            ->setPassword($password);
 
         return $user;
     }
